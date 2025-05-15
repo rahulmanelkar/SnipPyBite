@@ -1,0 +1,19 @@
+[project]
+name = "snippybite"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Rahul Manelkar", email = "rahul.manelkar@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "sqlmodel>=0.0.24",
+]
+
+[project.scripts]
+snippybite = "snippybite:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
