@@ -8,7 +8,11 @@ class Snippet(SQLModel, table=True):
     description: str
 
 
-if __name__ == "__main__":
+def main():
     engine = create_engine("sqlite:///snippets.db")
     SQLModel.metadata.create_all(engine)
     print("Database+table created")
+
+
+if __name__ == "__main__":
+    main()
