@@ -8,11 +8,11 @@ class Snippet(SQLModel, table=True):
     description: str
 
 
-def main():
+def createmodels():
     engine = create_engine("sqlite:///snippets.db")
     SQLModel.metadata.create_all(engine)
-    print("Database+table created")
+    return engine
 
 
 if __name__ == "__main__":
-    main()
+    createmodels()
