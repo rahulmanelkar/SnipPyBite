@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
 
-from models import Snippet
 from sqlmodel import Session, select
+
+from .models import Snippet
 
 
 class SnippetRepository(ABC):

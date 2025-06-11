@@ -14,7 +14,7 @@ dependencies = [
 ]
 
 [project.scripts]
-snippybite = "snippybite:main"
+snippybite = "snippybite.__main__:app"
 
 [build-system]
 requires = ["hatchling"]
