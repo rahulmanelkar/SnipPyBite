@@ -1,7 +1,8 @@
 import typer
-from models import Snippet, createmodels
-from repo import SQLSnippetRepo
 from rich import print
+
+from .models import Snippet, createmodels
+from .repo import SQLSnippetRepo
 
 engine = createmodels()
 
