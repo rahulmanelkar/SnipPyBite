@@ -53,6 +53,8 @@ class SQLSnippetRepo(SnippetRepository):
         with Session(self.engine) as session:
             session.add(snippet)
             session.commit()
+            session.refresh(snippet)  # to resolve error in fastAPI POST
+            return snippet
 
     def list(self) -> list[Snippet]:
         with Session(self.engine) as session:

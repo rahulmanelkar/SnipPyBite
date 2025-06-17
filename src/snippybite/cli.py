@@ -8,6 +8,7 @@ engine = createmodels()
 
 app = typer.Typer(name="Snippet")
 
+# to do: generalize to allow for test db injection
 repo = SQLSnippetRepo(engine)
 
 
@@ -22,8 +23,9 @@ def list():
     snippets = repo.list()
     if not snippets:
         print("No snippets found")
-    for snip in snippets:
-        print(snip)
+    else:
+        for snip in snippets:
+            print(snip)
 
 
 @app.command()
